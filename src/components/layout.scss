@@ -1,0 +1,316 @@
+@import "../vendor/reset";
+@import "../vendor/include-media";
+@import "../helpers/font-face";
+
+@import "../vendor/cds-light-theme";
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+@mixin gradient-background {
+  background: var(--gradient);
+  background-blend-mode: multiply;
+}
+
+@mixin gradient-text {
+  @include gradient-background();
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+._cds-light-theme {
+  --gradient: linear-gradient(268.57deg, #cf1bc0 -13.56%, #005eb8 100%),
+    linear-gradient(
+      272.36deg,
+      rgba(116, 61, 168, 0.5) -76.84%,
+      rgba(0, 166, 255, 0.5) 26.5%
+    );
+}
+
+main {
+  position: relative;
+  &::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none'%3E%3Cpath fill='%23EEF0F2' d='M0 0h24v24H0V0Z'/%3E%3Cpath fill='%23C2C3C7' d='M14 12.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z'/%3E%3C/svg%3E");
+
+    background-repeat: repeat;
+    content: "";
+    display: block;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+  }
+}
+
+._cds-light-theme {
+  font: var(--typography-body-p-mobile-regular);
+  @include media(">=md") {
+    font: var(--typography-body-p-desktop-regular);
+  }
+
+  h1 {
+    font: var(--typography-heading-h1-mobile-regular);
+
+    @include media(">=md") {
+      font: var(--typography-heading-h1-desktop-regular);
+    }
+  }
+
+  h2 {
+    font: var(--typography-heading-h2-mobile-regular);
+
+    @include media(">=md") {
+      font: var(--typography-heading-h2-desktop-regular);
+    }
+  }
+
+  h1,
+  h2 {
+    @include gradient-text();
+  }
+
+  img {
+    border-style: none;
+    max-width: 100%;
+  }
+
+  p {
+    color: #686a60;
+  }
+}
+
+.intro__section__content {
+  padding: 20px;
+}
+
+.intro__hero {
+  .intro__section__content {
+    padding-top: 64px;
+  }
+  display: grid;
+  grid-template-rows: repeat(2, auto);
+  text-align: center;
+  grid-gap: 0;
+
+  .intro__section__copy {
+    grid-template-rows: repeat(3, auto);
+    grid-gap: 40px;
+  }
+}
+
+.intro__hero__illustration {
+  max-height: 273px;
+}
+
+.cta-button {
+  display: inline;
+  @include gradient-background();
+  color: white;
+  text-decoration: none;
+  justify-self: center;
+
+  border-radius: 8px;
+  padding: 15px 30px;
+
+  font: var(--typography-body-p-mobile-semibold);
+  @include media(">=md") {
+    font: var(--typography-body-p-desktop-semibold);
+  }
+}
+
+.intro__list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-gap: 16px;
+}
+
+.intro__list-item__link {
+  @include gradient-text();
+
+  font: var(--typography-body-p-minus1-mobile-bold);
+  @include media(">=md") {
+    font: var(--typography-body-p-minus1-desktop-bold);
+  }
+}
+
+.intro__section__content {
+  background: white;
+}
+
+.intro__section__copy {
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  grid-gap: 20px;
+  font: var(--typography-body-p-minus1-mobile-regular);
+  @include media(">=md") {
+    font: var(--typography-body-p-minus1-desktop-regular);
+  }
+}
+
+.intro__for-designers,
+.intro__for-developers,
+.intro__support {
+  display: grid;
+  grid-template-rows: auto auto auto;
+  grid-gap: 0;
+  padding: 0 0;
+}
+
+.intro__support {
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  padding: 0;
+  position: relative;
+  z-index: 2;
+
+  .intro__list {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-gap: 20px;
+  }
+
+  .intro__list-item {
+    @include gradient-background();
+    padding: 50px;
+    border-radius: 8px;
+
+    a {
+      text-decoration: none;
+    }
+
+    .heading,
+    p {
+      color: white;
+    }
+  }
+
+  .intro__list-item__link {
+    text-align: center;
+    background: transparent;
+    display: grid;
+    grid-template-rows: repeat(4, auto);
+    grid-gap: 30px;
+    -webkit-background-clip: initial;
+    -webkit-text-fill-color: initial;
+  }
+
+  .intro__support__hr {
+    width: 33%;
+    border-top: 1px solid white;
+  }
+}
+
+.no-wrap {
+  white-space: nowrap;
+}
+
+.interstitial {
+  --cell-size: 5vw;
+
+  height: 192px;
+  display: grid;
+  grid-template-rows: 4fr 1fr;
+
+  .fade-in {
+    background: linear-gradient(
+      180deg,
+      #ffffff 0%,
+      rgba(255, 255, 255, 0.991615) 11.79%,
+      rgba(255, 255, 255, 0.967585) 21.38%,
+      rgba(255, 255, 255, 0.9296) 29.12%,
+      rgba(255, 255, 255, 0.879348) 35.34%,
+      rgba(255, 255, 255, 0.818519) 40.37%,
+      rgba(255, 255, 255, 0.7488) 44.56%,
+      rgba(255, 255, 255, 0.671881) 48.24%,
+      rgba(255, 255, 255, 0.589452) 51.76%,
+      rgba(255, 255, 255, 0.5032) 55.44%,
+      rgba(255, 255, 255, 0.414815) 59.63%,
+      rgba(255, 255, 255, 0.325985) 64.66%,
+      rgba(255, 255, 255, 0.2384) 70.88%,
+      rgba(255, 255, 255, 0.153748) 78.62%,
+      rgba(255, 255, 255, 0.0737185) 88.21%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  }
+
+  .blocks {
+    display: grid;
+    grid-template-columns: 1fr repeat(18, var(--cell-size)) 1fr;
+    grid-template-rows: repeat(4, var(--cell-size));
+    gap: 0px 0px;
+    grid-template-areas:
+      ". . _1f . . . . . . . _1h . . . . . _1f2 . ."
+      ". . . _2f . . . . . . . _2w _2w _2w _2w _2w _2w _2q ."
+      "_3f _3f _3f _3f . . _3f2 _3f2 _3f2 _3f2 _3f2 _3f2 _3f2 _3f2 _3f2 _3f2 . _3f3 _3f3"
+      "_4f _4f _4f _4f . . _4f2 _4f2 _4f2 _4f2 _4f2 _4f2 _4f2 _4f2 _4f2 _4f2 _4f2 _4f2 _4f2";
+  }
+
+  .r1f {
+    grid-area: _1f;
+    background: white;
+  }
+
+  .r1h {
+    grid-area: _1h;
+    background: white;
+    opacity: 0.6;
+  }
+
+  .r1f2 {
+    grid-area: _1f2;
+    background: white;
+  }
+
+  ._2f {
+    grid-area: _2f;
+    background: white;
+    opacity: 0.5;
+  }
+
+  ._2w {
+    grid-area: _2w;
+    background: white;
+  }
+
+  ._2q {
+    grid-area: _2q;
+    background: white;
+    opacity: 0.45;
+  }
+
+  ._3f {
+    grid-area: _3f;
+    background: white;
+  }
+
+  ._3f2 {
+    grid-area: _3f2;
+    background: white;
+  }
+
+  ._3f3 {
+    grid-area: _3f3;
+    background: white;
+  }
+
+  ._4f {
+    grid-area: _4f;
+    background: white;
+  }
+
+  ._4f2 {
+    grid-area: _4f2;
+    background: white;
+  }
+
+  [class*="blocks__row"] {
+    background: white;
+  }
+}
