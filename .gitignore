@@ -1,5 +1,6 @@
 dist/
 public/
+.cache/
 node_modules/
 *.bak
 logs/*
