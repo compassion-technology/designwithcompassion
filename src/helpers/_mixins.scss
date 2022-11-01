@@ -1,0 +1,122 @@
+@mixin gradient-background {
+  background: var(--gradient);
+  background-blend-mode: multiply;
+}
+
+@mixin gradient-text {
+  @include gradient-background();
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@mixin undo-gradient-text {
+  -webkit-background-clip: initial;
+  -webkit-text-fill-color: initial;
+}
+
+@mixin cta-button {
+  display: inline;
+  @include gradient-background();
+  color: white;
+  text-decoration: none;
+  justify-self: center;
+
+  border-radius: 8px;
+  padding: 15px 30px;
+
+  font: var(--typography-body-p-mobile-semibold);
+  @include media(">=md") {
+    font: var(--typography-body-p-desktop-semibold);
+  }
+}
+
+@mixin fade($direction) {
+  @if $direction == "out" {
+    &::before {
+      content: "";
+      top: 0;
+      left: 0;
+      right: 0;
+      height: calc(50% + 70px);
+      background: white;
+      position: absolute;
+      display: block;
+      z-index: -1;
+    }
+
+    &::after {
+      content: "";
+      height: 50%;
+      bottom: -70px;
+      left: 0;
+      right: 0;
+      background: white;
+      position: absolute;
+      display: block;
+      z-index: -1;
+      background: linear-gradient(
+        180deg,
+        #ffffff 0%,
+        rgba(255, 255, 255, 0.991615) 11.79%,
+        rgba(255, 255, 255, 0.967585) 21.38%,
+        rgba(255, 255, 255, 0.9296) 29.12%,
+        rgba(255, 255, 255, 0.879348) 35.34%,
+        rgba(255, 255, 255, 0.818519) 40.37%,
+        rgba(255, 255, 255, 0.7488) 44.56%,
+        rgba(255, 255, 255, 0.671881) 48.24%,
+        rgba(255, 255, 255, 0.589452) 51.76%,
+        rgba(255, 255, 255, 0.5032) 55.44%,
+        rgba(255, 255, 255, 0.414815) 59.63%,
+        rgba(255, 255, 255, 0.325985) 64.66%,
+        rgba(255, 255, 255, 0.2384) 70.88%,
+        rgba(255, 255, 255, 0.153748) 78.62%,
+        rgba(255, 255, 255, 0.0737185) 88.21%,
+        rgba(255, 255, 255, 0) 100%
+      );
+    }
+  } @else {
+    --height-boost: 70px;
+    &::before {
+      content: "";
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: calc(50% + var(--height-boost));
+      background: white;
+      position: absolute;
+      display: block;
+      z-index: -1;
+    }
+
+    &::after {
+      content: "";
+      height: 50%;
+      top: calc(-1 * var(--height-boost));
+      left: 0;
+      right: 0;
+      background: white;
+      position: absolute;
+      display: block;
+      z-index: -1;
+      background: linear-gradient(
+        0deg,
+        #ffffff 0%,
+        rgba(255, 255, 255, 0.991615) 11.79%,
+        rgba(255, 255, 255, 0.967585) 21.38%,
+        rgba(255, 255, 255, 0.9296) 29.12%,
+        rgba(255, 255, 255, 0.879348) 35.34%,
+        rgba(255, 255, 255, 0.818519) 40.37%,
+        rgba(255, 255, 255, 0.7488) 44.56%,
+        rgba(255, 255, 255, 0.671881) 48.24%,
+        rgba(255, 255, 255, 0.589452) 51.76%,
+        rgba(255, 255, 255, 0.5032) 55.44%,
+        rgba(255, 255, 255, 0.414815) 59.63%,
+        rgba(255, 255, 255, 0.325985) 64.66%,
+        rgba(255, 255, 255, 0.2384) 70.88%,
+        rgba(255, 255, 255, 0.153748) 78.62%,
+        rgba(255, 255, 255, 0.0737185) 88.21%,
+        rgba(255, 255, 255, 0) 100%
+      );
+    }
+  }
+}

@@ -5,12 +5,13 @@
  * See: https://www.gatsbyjs.com/docs/use-static-query/
  */
 
-import * as React from "react"
-import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
+import * as React from "react";
+import PropTypes from "prop-types";
+import { useStaticQuery, graphql } from "gatsby";
 
-import Header from "./header"
-import "./layout.scss"
+import Header from "./header";
+import "./layout.scss";
+import "./footer.scss";
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -21,36 +22,37 @@ const Layout = ({ children }) => {
         }
       }
     }
-  `)
+  `);
 
   return (
-    <><div className="_cds-light-theme">
-      <Header siteTitle={`Title`} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: `var(--size-content)`,
-          padding: `var(--size-gutter)`,
-        }}
-      >
-        {children}
-        <footer
+    <>
+      <div className="_cds-light-theme">
+        <Header siteTitle={`Title`} />
+        <div
           style={{
-            marginTop: `var(--space-5)`,
-            fontSize: `var(--font-sm)`,
+            margin: `0 auto`,
+            maxWidth: `var(--size-content)`,
+            padding: `var(--size-gutter)`,
           }}
         >
-          © {new Date().getFullYear()} &middot; Designed With Compassion.
-          {` `}
-        </footer>
-      </div>
+          {children}
+          <footer
+            className="footer"
+            style={{
+              color: "#6a6a6a",
+            }}
+          >
+            © {new Date().getFullYear()} Compassion International
+            {` `}
+          </footer>
+        </div>
       </div>
     </>
-  )
-}
+  );
+};
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-}
+};
 
-export default Layout
+export default Layout;

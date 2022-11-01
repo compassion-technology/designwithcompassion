@@ -1,0 +1,48 @@
+.interstitial-footer {
+  position: relative;
+
+  .fade {
+    transform: rotate(180deg);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+  }
+
+  .blocks {
+    grid-template-rows: repeat(3, var(--cell-size));
+
+    grid-template-areas:
+      ". _1a _1a _1a _1b _1c .  .  .  .  .  .  .  .  _1d _1e _1e _1e _1e .  ."
+      ".  .  .  .  .  .  .   .  .  .  .  .  .  .  .  .  .   _2a _2a .   ."
+      ".  .  .  .  .  .  .   .  .  .  .  .  .  .  .  .  .   _2a _2a .   .";
+  }
+
+  ._1a {
+    grid-area: _1a;
+  }
+
+  ._1b {
+    grid-area: _1b;
+    opacity: 0.4;
+  }
+
+  ._1c {
+    grid-area: _1c;
+  }
+
+  ._1d {
+    grid-area: _1d;
+    opacity: 0.4;
+  }
+
+  ._1e {
+    grid-area: _1e;
+  }
+
+  ._2a {
+    grid-area: _2a;
+    opacity: 0.4;
+  }
+}

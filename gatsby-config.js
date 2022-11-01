@@ -30,7 +30,7 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
         defaults: {
           formats: [`auto`, `webp`],
-          placeholder: `dominantColor`,
+          placeholder: `blurred`,
           quality: 80,
           breakpoints: [320, 375, 768, 1024, 1200],
           backgroundColor: `transparent`,
@@ -40,9 +40,9 @@ module.exports = {
           pngOptions: {},
           webpOptions: {},
           avifOptions: {},
-        }
+        },
       },
     },
     `gatsby-plugin-sass`,
   ],
-}
+};

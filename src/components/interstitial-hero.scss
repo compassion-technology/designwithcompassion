@@ -1,0 +1,57 @@
+.interstitial-hero {
+  .blocks {
+    padding-top: 88px;
+    grid-template-areas:
+      ". . _1f . . . . . . . _1h . . . . . _1f2 . ."
+      ". . . _2f . . . . . . . _2w _2w _2w _2w _2w _2w _2q ."
+      "_3f _3f _3f _3f . . _3f2 _3f2 _3f2 _3f2 _3f2 _3f2 _3f2 _3f2 _3f2 _3f2 . _3f3 _3f3"
+      "_4f _4f _4f _4f . . _4f2 _4f2 _4f2 _4f2 _4f2 _4f2 _4f2 _4f2 _4f2 _4f2 _4f2 _4f2 _4f2";
+  }
+
+  .r1f {
+    grid-area: _1f;
+  }
+
+  .r1h {
+    grid-area: _1h;
+    opacity: 0.6;
+  }
+
+  .r1f2 {
+    grid-area: _1f2;
+  }
+
+  ._2f {
+    grid-area: _2f;
+    opacity: 0.5;
+  }
+
+  ._2w {
+    grid-area: _2w;
+  }
+
+  ._2q {
+    grid-area: _2q;
+    opacity: 0.45;
+  }
+
+  ._3f {
+    grid-area: _3f;
+  }
+
+  ._3f2 {
+    grid-area: _3f2;
+  }
+
+  ._3f3 {
+    grid-area: _3f3;
+  }
+
+  ._4f {
+    grid-area: _4f;
+  }
+
+  ._4f2 {
+    grid-area: _4f2;
+  }
+}
