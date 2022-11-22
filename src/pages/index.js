@@ -61,7 +61,7 @@ const IndexPage = () => (
             <ul className="intro__list">
               <li className="intro__list-item">
                 <Link
-                  to="https://www.figma.com/file/gzMGtvCKCtLFNFEl10X8bO/%F0%9F%9A%A7-CDS-_-UI-Kit"
+                  to="https://www.figma.com/community/file/1170436462932763303"
                   className="intro__list-item__link"
                 >
                   Figma Library{" "}
@@ -99,7 +99,7 @@ const IndexPage = () => (
             <ul className="intro__list">
               <li className="intro__list-item">
                 <Link
-                  to="https://www.figma.com/file/gzMGtvCKCtLFNFEl10X8bO/%F0%9F%9A%A7-CDS-_-UI-Kit"
+                  to="https://www.figma.com/community/file/1170436462932763303"
                   className="intro__list-item__link"
                 >
                   Figma Library{" "}
@@ -135,7 +135,7 @@ const IndexPage = () => (
           <ul className="intro__list">
             <li className="intro__list-item">
               <Link
-                to="https://www.figma.com/file/gzMGtvCKCtLFNFEl10X8bO/%F0%9F%9A%A7-CDS-_-UI-Kit"
+                to="https://www.figma.com/community/file/1170436462932763303"
                 className="intro__list-item__link"
               >
                 <h3 className="heading">
