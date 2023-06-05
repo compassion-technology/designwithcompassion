@@ -5,6 +5,8 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "@compassion-global-experience/core": "^0.1.0-alpha.2",
+    "@compassion-global-experience/react": "^0.1.1-alpha.2",
     "gatsby": "^4.24.5",
     "gatsby-plugin-image": "^2.24.0",
     "gatsby-plugin-manifest": "^4.24.0",
