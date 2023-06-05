@@ -8,6 +8,8 @@ import InterstitialHero from "../components/interstitial-hero";
 import InterstitialMain from "../components/interstitial-main";
 import InterstitialFooter from "../components/interstitial-footer";
 
+import { Button } from "@compassion-global-experience/react";
+
 import brick from "../images/brick.svg";
 import heroIllustration from "../images/hero.svg";
 import arrowRight from "../images/arrow-right.svg";
@@ -27,11 +29,11 @@ const IndexPage = () => (
             alt="Blue building blocks falling into place."
           />
           <div className="intro__section__copy">
+            <span className="cds-title no-wrap">
+              <img src={brick} alt="A single blue building block." />
+              <span>Compassion Design System</span>
+            </span>
             <div className="intro__hero__heading">
-              <span className="cds-title no-wrap">
-                <img src={brick} alt="A single blue building block." />
-                <span>Compassion Design System</span>
-              </span>
               <h1>
                 <span className="no-wrap">Here for you.</span>
                 <br />
@@ -39,13 +41,17 @@ const IndexPage = () => (
               </h1>
             </div>
             <p>
-              A collection of reusable resources, components, and guidelines
-              that make it easy for you to{" "}
-              <span className="no-wrap">Design With Compassion.</span>
+              Let your creativity thrive as you build meaningful experiences for
+              the neighbours we serve across the globe.
             </p>
-            <Link to="#get-started" className="cta-button">
-              Get Started{" "}
-              <img src={arrowRight} className="icon-inline" alt="" />
+
+            <p>
+              The Compassion Design System is a powerful, reusable collection of
+              resources, components, and guidelines that make it simple for you
+              to design with compassion.
+            </p>
+            <Link to="#get-started" className="cta-button primary">
+              <Button label="Get Started" mode="primary" />
             </Link>
           </div>
         </div>
@@ -56,26 +62,26 @@ const IndexPage = () => (
           <div className="intro__section__copy">
             <h2>For Designers</h2>
             <p>
-              Jumpstart your designs with ready-to-use components and templates.
+              Unlocking your creativity, the Compassion Design System offers
+              tools to streamline your work and infuse consistency, supporting
+              your breathtakingly impactful neighbour-centered designs.
             </p>
             <ul className="intro__list">
               <li className="intro__list-item">
                 <Link
                   to="https://www.figma.com/community/file/1170436462932763303"
-                  className="intro__list-item__link"
+                  className="cta-button tertiary"
                 >
-                  Figma Library{" "}
-                  <img src={arrowRightBlue} className="icon-inline" alt="" />
+                  <Button label="Figma Library" mode="tertiary" />
                 </Link>
               </li>
               <li className="intro__list-item">
-                {/* <Link to="/" className="intro__list-item__link coming-soon"> */}
-                <span to="/" className="intro__list-item__link coming-soon">
-                  Design Tokens{" "}
-                  {/* <img src={arrowRightBlue} className="icon-inline" /> */}
-                  <span className="tag--coming-soon">coming soon</span>
-                </span>
-                {/* </Link> */}
+                {/* <Link
+                  to="https://www.figma.com/community/file/1170436462932763303"
+                  className="cta-button tertiary"
+                >
+                  <Button label="Design Tokens" mode="tertiary" />
+                </Link> */}
               </li>
             </ul>
           </div>
@@ -93,26 +99,25 @@ const IndexPage = () => (
           <div className="intro__section__copy">
             <h2>For Developers</h2>
             <p>
-              Fast track your implementation with Compassion-branded components,
-              themes, and sample apps.
+              Building with the Compassion Design System makes implementation
+              seamless and precise, fast-tracking your coding journey to
+              pixel-perfect, neighbour-centered outcomes.
             </p>
             <ul className="intro__list">
               <li className="intro__list-item">
                 <Link
                   to="https://www.figma.com/community/file/1170436462932763303"
-                  className="intro__list-item__link"
+                  className="cta-button tertiary"
                 >
-                  Figma Library{" "}
-                  <img src={arrowRightBlue} className="icon-inline" alt="" />
+                  <Button label="Figma Library" mode="tertiary" />
                 </Link>
               </li>
               <li className="intro__list-item">
                 <Link
-                  to="https://github.com/compassion-global-experience/cds-tokens"
-                  className="intro__list-item__link"
+                  to="https://www.npmjs.com/package/@compassion-global-experience/cds-tokens"
+                  className="cta-button tertiary"
                 >
-                  Developer Tokens{" "}
-                  <img src={arrowRightBlue} className="icon-inline" alt="" />
+                  <Button label="Developer Tokens" mode="tertiary" />
                 </Link>
               </li>
             </ul>
@@ -147,8 +152,7 @@ const IndexPage = () => (
                 </p>
                 <hr className="intro__support__hr" />
                 <p className="intro__section__cta">
-                  Get Started{" "}
-                  <img src={arrowRight} className="icon-inline" alt="" />
+                  <Button label="Get Started" mode="tertiary" />
                 </p>
               </Link>
             </li>
@@ -165,17 +169,14 @@ const IndexPage = () => (
                   Notice something that isn't right? Let us know.
                 </p>
                 <hr className="intro__support__hr" />
+
                 <p className="intro__section__cta">
-                  Report Now{" "}
-                  <img src={arrowRight} className="icon-inline" alt="" />
+                  <Button label="Report Now" mode="tertiary" />
                 </p>
               </Link>
             </li>
             <li className="intro__list-item">
-              <Link
-                to="https://airtable.com/shruj0AzDMKj7pzsn"
-                className="intro__list-item__link"
-              >
+              <Link to="/contact" className="intro__list-item__link">
                 <h3 className="heading">
                   <img src={iconContactUs} className="icon-left" alt="" />{" "}
                   Contact Us
@@ -185,8 +186,7 @@ const IndexPage = () => (
                 </p>
                 <hr className="intro__support__hr" />
                 <p className="intro__section__cta">
-                  Contact Us{" "}
-                  <img src={arrowRight} className="icon-inline" alt="" />
+                  <Button label="Contact Us" mode="tertiary" />
                 </p>
               </Link>
             </li>
