@@ -1,0 +1,29 @@
+@mixin form-spacing {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.contact-form-container {
+  @include form-spacing();
+  width: 100%;
+
+  form {
+    @include form-spacing();
+  }
+
+  button {
+    width: fit-content;
+  }
+
+  .topic-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+
+    .selected-topic {
+      border-color: var(--form-focus-border-color);
+      border-width: 2px;
+    }
+  }
+}

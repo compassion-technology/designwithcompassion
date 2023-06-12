@@ -2,6 +2,7 @@ import * as React from "react";
 import { Link } from "gatsby";
 
 import Layout from "../components/layout";
+import ContactForm from "../components/ContactForm";
 import Seo from "../components/seo";
 import InterstitialHero from "../components/interstitial-hero";
 
@@ -60,10 +61,9 @@ const ContactPage = () => (
                 </div>
               </div>
             </div>
-            {/* <div className="contact__form">
-              <h4>Netlify form goes here</h4>
-              <p>Form fields...</p>
-            </div> */}
+            <div className="contact__form">
+              <ContactForm />
+            </div>
           </div>
         </div>
       </section>
