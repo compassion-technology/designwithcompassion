@@ -154,7 +154,7 @@ const PartnerWithUs = () => (
         </div>
       </section>
 
-      {/* <section>
+      <section>
         <div className="page__section__content">
           <div className="intro__section__copy">
             <div>
@@ -166,33 +166,51 @@ const PartnerWithUs = () => (
             </div>
 
             <div className="process-grid">
+              {/* ROW 1 */}
               <img src={iconLargeTreeStructure} />
               <img src={dottedArrow} className="arrow-column" />
               <img src={iconLargeTestTube} />
               <img src={dottedArrow} className="arrow-column" />
               <img src={iconLargeCode} />
 
-              <h3>Design</h3>
-              <h3>Test</h3>
-              <h3>Develop</h3>
+              {/* ROW 2 */}
 
+              <div className="sixteen-px-gap-flexbox">
+                <div className="circle-number">1</div>
+                <h3>Design</h3>
+              </div>
+
+              <div className="sixteen-px-gap-flexbox">
+                <div className="circle-number">2</div>
+                <h3>Test</h3>
+              </div>
+
+              <div className="sixteen-px-gap-flexbox">
+                <div className="circle-number">2</div>
+                <h3>Develop</h3>
+              </div>
+
+              {/* ROW 3 */}
               <p>
-                From ideation to designs to fully functioning prototypes... more
-                about design here.
+                Turn your idea into a prototype grounded in neighbour insights
+                to meet their needs.
               </p>
               <p>
-                Have confidence in your next steps. Something about testing
-                here.
+                Validate your prototype to know with confidence that it will
+                serve your neighbour well.
               </p>
-              <p>Something about our developers and the design system here.</p>
+              <p>
+                Create and design to evolve your idea into a fully developed
+                product.
+              </p>
             </div>
 
-            <Link to="#">
+            {/* <Link to="#">
               <Button label="How does UX fit into NCD?" mode="secondary" />
-            </Link>
+            </Link> */}
           </div>
         </div>
-      </section> */}
+      </section>
       {/* <section>
         <div className="page__section__content">
           <h2>Testimonials</h2>
