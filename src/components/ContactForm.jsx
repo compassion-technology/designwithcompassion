@@ -38,7 +38,6 @@ const ContactForm = () => {
   };
 
   const handleTopicChange = (e) => {
-    console.log(e.target.value);
     setTopic(e.target.value);
   };
 
@@ -87,8 +86,6 @@ const ContactForm = () => {
           setSubmissionMessage("An error occured while submitting the form");
           setSubmissionError(true);
         });
-    } else {
-      console.log("missing required fields");
     }
   };
 
