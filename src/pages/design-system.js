@@ -23,8 +23,8 @@ const DesignSystemPage = () => (
               <h1>Unleash your creativity with the Compassion Design System</h1>
             </div>
             <p>
-              Ignite your creative prowess and accelerate your development speed
-              with the Compassion Design System.
+              Ignite your creativity and accelerate your development speed with
+              the Compassion Design System.
             </p>
             <p>
               Seamlessly build captivating experiences that resonate with our
@@ -44,11 +44,19 @@ const DesignSystemPage = () => (
             <p>
               The Compassion Design System offers a unified language and shared
               set of tools that make it easier for designers and developers to
-              collaborate. It brings consistency and cohesion to your work,
-              speeding up the design and development process while ensuring that
-              the end product aligns perfectly with Compassion’s visual identity
-              and brand expression. Experience the Compassion Design System:
-              where efficiency meets excellence.
+              collaborate.{" "}
+            </p>
+
+            <p>
+              It brings consistency and cohesion to your work, speeding up the
+              design and development process while ensuring that the end product
+              aligns perfectly with Compassion’s visual identity and brand
+              expression.
+            </p>
+
+            <p>
+              Experience the Compassion Design System: where efficiency meets
+              excellence.
             </p>
           </div>
         </div>
@@ -58,19 +66,16 @@ const DesignSystemPage = () => (
           <div className="intro__section__copy">
             <h2>For Designers</h2>
             <p>
-              Jumpstart your designs with ready-to-use templates templates and
-              components.
+              Jumpstart your designs with ready-to-use templates and components.
             </p>
             <p>
-              <strong>To get you started…</strong>
+              <strong>To get you started.</strong>
             </p>
             <ol className="circle-numbers">
               <li>
                 Contact the Global UX team to walkthrough the UI Kit & Tokens
               </li>
-              <li>
-                The Global UX team will get Figma access set up for your team
-              </li>
+              <li>The Global UX team will set up Figma access for your team</li>
               <li>
                 Complete our onboarding sandbox to learn how to use the
                 Compassion Design System
@@ -87,10 +92,10 @@ const DesignSystemPage = () => (
             <h2>For Developers</h2>
             <p>
               Fast track implementation with Compassion branded sample apps,
-              themes, and components.
+              themes and components. To get you started.
             </p>
             <p>
-              <strong>To get you started…</strong>
+              <strong>To get you started.</strong>
             </p>
             <ol className="circle-numbers">
               <li>

@@ -1,0 +1,124 @@
+@import "../vendor/include-media";
+
+.hero-svg {
+  .superhero-animation {
+    width: 50%;
+    max-width: 145px;
+    @include media(">=lg") {
+      max-width: 240px;
+    }
+  }
+
+  .first-block {
+    animation: move-around-2 2.5s ease-in-out 0s;
+    animation-iteration-count: infinite;
+  }
+
+  .second-block {
+    animation: move-around 3.5s ease-in-out 0.5s;
+    animation-iteration-count: infinite;
+  }
+
+  .third-block {
+    animation: move-around 3s ease-in-out 0s;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes move-around-2 {
+    0% {
+      transform: translate(0%, 0%);
+    }
+
+    50% {
+      transform: translate(0%, 1%);
+    }
+
+    100% {
+      transform: translate(0%, 0%);
+    }
+  }
+
+  @keyframes move-around {
+    0% {
+      transform: translate(0%, 0%);
+    }
+
+    50% {
+      transform: translate(0%, -3%);
+    }
+
+    100% {
+      transform: translate(0%, 0%);
+    }
+  }
+}
+
+.developer-svg {
+  display: flex;
+  justify-content: center;
+
+  svg {
+    width: 340px;
+  }
+  .top-cube {
+    animation: move-around 4s ease-in-out 0.5s;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes move-around {
+    0% {
+      transform: translate(0%, 0%);
+    }
+
+    50% {
+      transform: translate(0%, 15%);
+    }
+
+    100% {
+      transform: translate(0%, 0%);
+    }
+  }
+}
+
+.designer-svg {
+  display: flex;
+  justify-content: center;
+
+  svg {
+    width: 281px;
+  }
+
+  .bottom-right-cube {
+    animation: move-around 4s ease-in-out 0s;
+    animation-iteration-count: infinite;
+  }
+
+  .bottom-left-cube {
+    animation: move-around 4.5s ease-in-out 0.1s;
+    animation-iteration-count: infinite;
+  }
+
+  .top-right-cube {
+    animation: move-around 4s ease-in-out 0.2s;
+    animation-iteration-count: infinite;
+  }
+
+  .top-left-cube {
+    animation: move-around 3s ease-in-out 0.3s;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes move-around {
+    0% {
+      transform: translate(0%, 0%);
+    }
+
+    50% {
+      transform: translate(0%, 3%);
+    }
+
+    100% {
+      transform: translate(0%, 0%);
+    }
+  }
+}
