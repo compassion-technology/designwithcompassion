@@ -57,10 +57,14 @@ main {
   }
 
   .cds-title {
+    justify-content: center;
     display: inline-flex;
     align-items: center;
     gap: 8px;
     color: var(--semantic-color-text-muted);
+    @include media(">=md") {
+      justify-content: left;
+    }
   }
 
   h1 {
